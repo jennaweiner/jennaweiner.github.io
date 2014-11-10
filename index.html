@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grammared</title>
+
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body id="home-body">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Grammared</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron">
+    <h1 id="head">So you think you know grammar?</h1>
+    <h2 id="subhead">Test your skills now!</h2>
+    <p class="span7 text-center"><a class="btn btn-primary btn-lg" id="start">Start</a></p>
+    </div>
+
+    <div class="progress progress-striped" style="display: none">
+       <div class="progress-bar progress-bar-default"></div>
+     </div>
+
+    <div class="panel panel-info" style="display: none" id="question1">
+      <div class="panel-heading">
+        <h3 class="panel-title">QUESTION 1</h3>
+      </div>
+      <div class="panel-body">
+      <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+       <form class="form-horizontal" id="q1-form">
+       <fieldset>
+
+       <!-- Multiple Radios -->
+       <div class="form-group" id="q1">
+         <div class="radio">
+           <label for="q1-0">
+             <input type="radio" name="q1" id="q1-0" value="1" checked="checked">
+             I don't know what to do; what do you think?
+           </label>
+        </div>
+         <div class="radio">
+           <label for="q1-1">
+             <input type="radio" name="q1" id="q1-1" value="2">
+             I don't know what to do - what do you think?
+           </label>
+        </div>
+         <div class="radio">
+           <label for="q1-2">
+             <input type="radio" name="q1" id="q1-2" value="3">
+             I don't know what to do — what do you think?
+           </label>
+        </div>
+         <div class="radio">
+           <label for="q1-3">
+             <input type="radio" name="q1" id="q1-3" value="4">
+             I don't know what to do. What do you think?
+           </label>
+           <p><button type="submit" class="btn btn-default submit" id="qsubmit1">Submit</button></p>
+           </div>
+        </div>
+         </div>
+       </div>
+
+       </fieldset>
+       </form>
+    </div>
+        </div>
+
+        <div class="panel panel-info" style="display: none" id="question2">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 2</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Ah, punctuation. Which of these is <strong class="correct">CORRECT </strong>(in the US?)</p>
+
+           <form class="form-horizontal" id="q2-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q2">
+             <div class="radio">
+               <label for="q2-0">
+                 <input type="radio" name="q2" id="q2-0" value="1" checked="checked">
+                 The sign said “Caution”. She thought, “I wonder what I should do”.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q2-1">
+                 <input type="radio" name="q2" id="q2-1" value="2">
+                 The sign said “Caution.” She thought, “I wonder what I should do”.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q2-2">
+                 <input type="radio" name="q2" id="q2-2" value="3">
+                 The sign said “Caution”. She thought, “I wonder what I should do.”
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q2-3">
+                 <input type="radio" name="q2" id="q2-3" value="4">
+                 The sign said “Caution.” She thought, “I wonder what I should do.”
+               </label>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit2">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+       </div>
+
+            <div class="panel panel-info" style="display: none" id="question3">
+              <div class="panel-heading">
+                <h3 class="panel-title">QUESTION 3</h3>
+              </div>
+              <div class="panel-body">
+              <p class="question">And which of these is <strong class="correct">CORRECT </strong>(in the US)?</p>
+
+               <form class="form-horizontal" id="q3-form">
+               <fieldset>
+
+               <!-- Multiple Radios -->
+               <div class="form-group" id="q3">
+                 <div class="radio">
+                   <label for="q3-0">
+                     <input type="radio" name="q3" id="q3-0" value="1" checked="checked">
+                     “Can you believe he didn’t reply?” she said. That was true; not even a “hello”!
+                   </label>
+                </div>
+                 <div class="radio">
+                   <label for="q3-1">
+                     <input type="radio" name="q3" id="q3-1" value="2">
+                     “Can you believe he didn’t reply?” she said. That was true; not even a “hello!"
+                   </label>
+                </div>
+                 <div class="radio">
+                   <label for="q3-2">
+                     <input type="radio" name="q3" id="q3-2" value="3">
+                     “Can you believe he didn’t reply”? she said. That was true; not even a “hello”!
+                   </label>
+                </div>
+                 <div class="radio">
+                   <label for="q3-3">
+                     <input type="radio" name="q3" id="q3-3" value="4">
+                     “Can you believe he didn’t reply”? she said. That was true; not even a “hello!"
+                   </label>
+                   <p><button type="submit" class="btn btn-default submit" id="qsubmit3">Submit</button></p>
+                   </div>
+                </div>
+                 </div>
+               </div>
+
+               </fieldset>
+               </form>
+            </div>
+                </div>
+
+      <div class="panel panel-info" style="display: none" id="question4">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 4</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q4-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q4">
+           <div class="radio">
+             <label for="q4-0">
+               <input type="radio" name="q4" id="q4-0" value="1" checked="checked">
+               This will be a huge help for team members that have many large files.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q4-1">
+               <input type="radio" name="q4" id="q4-1" value="2">
+               This will be a huge help for team members who have many large files.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q4-2">
+               <input type="radio" name="q4" id="q4-2" value="3">
+               This will be a huge help for team members which have many large files.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q4-3">
+               <input type="radio" name="q4" id="q4-3" value="4">
+               This will be a huge help for companies who have many large files.
+             </label>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit4">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+     </div>
+    </div>
+        <div class="panel panel-info" style="display: none" id="question5">
+             <div class="panel-heading">
+               <h3 class="panel-title">QUESTION 5</h3>
+             </div>
+             <div class="panel-body">
+             <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+              <form class="form-horizontal" id="q5-form">
+              <fieldset>
+
+              <!-- Multiple Radios -->
+              <div class="form-group" id="q5">
+                <div class="radio">
+                  <label for="q5-0">
+                    <input type="radio" name="q5" id="q5-0" value="1" checked="checked">
+                    Only full-time employees can use this program.
+                  </label>
+               </div>
+                <div class="radio">
+                  <label for="q5-1">
+                    <input type="radio" name="q5" id="q5-1" value="2">
+                    The stats are updating in real time.
+                  </label>
+               </div>
+                <div class="radio">
+                  <label for="q5-2">
+                    <input type="radio" name="q5" id="q5-2" value="3">
+                    Check out our newly-launched features!
+                  </label>
+               </div>
+                <div class="radio">
+                  <label for="q5-3">
+                    <input type="radio" name="q5" id="q5-3" value="4">
+                    Our day-to-day workflows rely on mobile phones.
+                  </label>
+                  <p><button type="submit" class="btn btn-default submit" id="qsubmit5">Submit</button></p>
+                  </div>
+               </div>
+                </div>
+              </div>
+
+              </fieldset>
+              </form>
+           </div>
+               </div>
+
+        <div class="panel panel-info" style="display: none" id="question6">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 6</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+           <form class="form-horizontal" id="q6-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q6">
+             <div class="radio">
+               <label for="q6-0">
+                 <input type="radio" name="q6" id="q6-0" value="1" checked="checked">
+                 Who did you go to the movies with? 
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q6-1">
+                 <input type="radio" name="q6" id="q6-1" value="2">
+                 To whom did you send the invitation?
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q6-2">
+                 <input type="radio" name="q6" id="q6-2" value="3">
+                 Do you know whom is talking to her?
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q6-3">
+                 <input type="radio" name="q6" id="q6-3" value="4">
+                 I never know who to ask about these things.
+               </label>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit6">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+
+       </fieldset>
+       </form>
+    </div>
+        </div>
+        <div class="panel panel-info" style="display: none" id="question7">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 7</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+           <form class="form-horizontal" id="q7-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q7">
+             <div class="radio">
+               <label for="q7-0">
+                 <input type="radio" name="q7" id="q7-0" value="1" checked="checked">
+                 The family’s car was stolen.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q7-1">
+                 <input type="radio" name="q7" id="q7-1" value="2">
+                 The waitress’s hair is blonde.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q7-2">
+                 <input type="radio" name="q7" id="q7-2" value="3">
+                 The laptops’ screens were all blank.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q7-3">
+                 <input type="radio" name="q7" id="q7-3" value="4">
+                 The hair salon accepts walk in’s.
+               </label>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit7">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+
+       </fieldset>
+       </form>
+    </div>
+        </div>
+        <div class="panel panel-info" style="display: none" id="question8">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 8</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+           <form class="form-horizontal" id="q8-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q8">
+             <div class="radio">
+               <label for="q8-0">
+                 <input type="radio" name="q8" id="q8-0" value="1" checked="checked">
+                 He said he was giving her “compliments,” but they all seemed like insults.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q8-1">
+                 <input type="radio" name="q8" id="q8-1" value="2">
+                 He said he was giving her “compliments”, but they all seemed like insults. 
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q8-2">
+                 <input type="radio" name="q8" id="q8-2" value="3">
+                 It’s hard to tell where punctuation should go (especially with parentheses.)
+               </label>
+            </div>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit8">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question9">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 9</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q9-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q9">
+           <div class="radio">
+             <label for="q9-0">
+               <input type="radio" name="q9" id="q9-0" value="1" checked="checked">
+               There were fewer restrictions on travel back then. 
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q9-1">
+               <input type="radio" name="q9" id="q9-1" value="2">
+               There was less water in the pool after he did a cannonball.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q9-2">
+               <input type="radio" name="q9" id="q9-2" value="3">
+               There were less people than I expected.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q9-3">
+               <input type="radio" name="q9" id="q9-3" value="4">
+               We published fewer articles this quarter.
+             </label>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit9">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question10">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 10</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q10-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q10">
+           <div class="radio">
+             <label for="q10-0">
+               <input type="radio" name="q10" id="q10-0" value="1" checked="checked">
+               The amount of beer you’ve consumed is staggering.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q10-1">
+               <input type="radio" name="q10" id="q10-1" value="2">
+               I’m impressed with the amount of people you’ve convinced to attend.
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit10">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question11">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 11</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q11-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q11">
+           <div class="radio">
+             <label for="q11-0">
+               <input type="radio" name="q11" id="q11-0" value="1" checked="checked">
+               Riddle me this. Are there two spaces after a period?
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q11-1">
+               <input type="radio" name="q11" id="q11-1" value="2">
+               Riddle me this.  &nbspAre there two spaces after a period?
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit11">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+            <div class="panel panel-info" style="display: none" id="question12">
+              <div class="panel-heading">
+                <h3 class="panel-title">QUESTION 12</h3>
+              </div>
+              <div class="panel-body">
+              <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+               <form class="form-horizontal" id="q12-form">
+               <fieldset>
+
+               <!-- Multiple Radios -->
+               <div class="form-group" id="q12">
+                 <div class="radio">
+                   <label for="q12-0">
+                     <input type="radio" name="q12" id="q12-0" value="1" checked="checked">
+                     Let the people eat their cake!
+                   </label>
+                </div>
+                 <div class="radio">
+                   <label for="q12-1">
+                     <input type="radio" name="q12" id="q12-1" value="2">
+                     They all did they’re hair exactly alike.
+                   </label>
+                </div>
+                 <div class="radio">
+                   <label for="q12-2">
+                     <input type="radio" name="q12" id="q12-2" value="3">
+                     They’re going to Oktoberfest; are you going there with them?
+                   </label>
+                </div>
+                   <p><button type="submit" class="btn btn-default submit" id="qsubmit12">Submit</button></p>
+                   </div>
+                </div>
+                 </div>
+               </div>
+
+               </fieldset>
+               </form>
+            </div>
+                </div>
+
+       </fieldset>
+       </form>
+    </div>
+        </div>
+        <div class="panel panel-info" style="display: none" id="question13">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 13</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+           <form class="form-horizontal" id="q13-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q13">
+             <div class="radio">
+               <label for="q13-0">
+                 <input type="radio" name="q13" id="q13-0" value="1" checked="checked">
+                 It’s easy to ace this test — just answer all its questions correctly. 
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q13-1">
+                 <input type="radio" name="q13" id="q13-1" value="2">
+                 It’s easy to ace this test — just answer all it’s questions correctly.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q13-2">
+                 <input type="radio" name="q13" id="q13-2" value="3">
+                 Its easy to ace this test — just answer all its questions correctly.
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q13-3">
+                 <input type="radio" name="q13" id="q13-3" value="4">
+                 Its easy to ace this test — just answer all it’s questions correctly.
+               </label>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit13">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+
+       </fieldset>
+       </form>
+    </div>
+        </div>
+        <div class="panel panel-info" style="display: none" id="question14">
+          <div class="panel-heading">
+            <h3 class="panel-title">QUESTION 14</h3>
+          </div>
+          <div class="panel-body">
+          <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+           <form class="form-horizontal" id="q14-form">
+           <fieldset>
+
+           <!-- Multiple Radios -->
+           <div class="form-group" id="q14">
+             <div class="radio">
+               <label for="q14-0">
+                 <input type="radio" name="q14" id="q14-0" value="1" checked="checked">
+                 You’re so lucky you’re hair is naturally straight! 
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q14-1">
+                 <input type="radio" name="q14" id="q14-1" value="2">
+                 Your so lucky your hair is naturally straight! 
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q14-2">
+                 <input type="radio" name="q14" id="q14-2" value="3">
+                 You’re so lucky your hair is naturally straight!
+               </label>
+            </div>
+             <div class="radio">
+               <label for="q14-3">
+                 <input type="radio" name="q14" id="q14-3" value="4">
+                 Your so lucky you’re hair is naturally straight! 
+               </label>
+               <p><button type="submit" class="btn btn-default submit" id="qsubmit14">Submit</button></p>
+               </div>
+            </div>
+             </div>
+           </div>
+
+           </fieldset>
+           </form>
+        </div>
+            </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question15">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 15</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q15-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q15">
+           <div class="radio">
+             <label for="q15-0">
+               <input type="radio" name="q15" id="q15-0" value="1" checked="checked">
+               We’re not hungry for lunch, since we had a late breakfast.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q15-1">
+               <input type="radio" name="q15" id="q15-1" value="2">
+               We’re not hungry for lunch, because we had a late breakfast.
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit15">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question16">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 16</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q16-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q16">
+           <div class="radio">
+             <label for="q16-0">
+               <input type="radio" name="q16" id="q16-0" value="1" checked="checked">
+               She really honed in on his weaknesses.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q16-1">
+               <input type="radio" name="q16" id="q16-1" value="2">
+               My last job helped me hone my grammar skills.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q16-2">
+               <input type="radio" name="q16" id="q16-2" value="3">
+               Let’s home in on the exact problem here.
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit16">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question17">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 17</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q17-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q17">
+           <div class="radio">
+             <label for="q17-0">
+               <input type="radio" name="q17" id="q17-0" value="1" checked="checked">
+                "How are you?” “Not good.” “Oh no, I feel so bad!”
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q17-1">
+               <input type="radio" name="q17" id="q17-1" value="2">
+               "How are you?” “Not well.” “Oh no, I feel so badly!”
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q17-2">
+               <input type="radio" name="q17" id="q17-2" value="3">
+               "How are you?” “Not well.” “Oh no, I feel so bad!"
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q17-3">
+               <input type="radio" name="q17" id="q17-3" value="4">
+               "How are you?” “Not good.” “Oh no, I feel so badly!”
+             </label>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit17">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question18">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 18</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q18-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q18">
+           <div class="radio">
+             <label for="q18-0">
+               <input type="radio" name="q18" id="q18-0" value="1" checked="checked">
+               Without realizing it, her feelings were hurt. 
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q18-1">
+               <input type="radio" name="q18" id="q18-1" value="2">
+               Having finished her homework, the girl turned on the TV.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q18-2">
+               <input type="radio" name="q18" id="q18-2" value="3">
+               Without having met her, it’s difficult to advise you here.
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit18">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question19">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 19</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="incorrect">INCORRECT</strong>? (The grammar, not the dating advice...)</p>
+
+         <form class="form-horizontal" id="q19-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q19">
+           <div class="radio">
+             <label for="q19-0">
+               <input type="radio" name="q19" id="q19-0" value="1" checked="checked">
+               The harsh truth: Why no one responds to you on Tinder
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q19-1">
+               <input type="radio" name="q19" id="q19-1" value="2">
+               We realized that one thing was true: People hate mirror selfies.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q19-2">
+               <input type="radio" name="q19" id="q19-2" value="3">
+               There are two things you should never send: inappropriate pictures and aggressive invitations.
+             </label>
+          </div>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit19">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+     </fieldset>
+     </form>
+  </div>
+      </div>
+      <div class="panel panel-info" style="display: none" id="question20">
+        <div class="panel-heading">
+          <h3 class="panel-title">QUESTION 20</h3>
+        </div>
+        <div class="panel-body">
+        <p class="question">Which of the following is <strong class="correct">CORRECT</strong>?</p>
+
+         <form class="form-horizontal" id="q20-form">
+         <fieldset>
+
+         <!-- Multiple Radios -->
+         <div class="form-group" id="q20">
+           <div class="radio">
+             <label for="q20-0">
+               <input type="radio" name="q20" id="q20-0" value="1" checked="checked">
+               If you’re a decent person, <u>than</u> it’s not a good idea to tell someone you’re better <u>then</u> them. 
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q20-1">
+               <input type="radio" name="q20" id="q20-1" value="2">
+               If you’re a decent person, <u>than</u> it’s not a good idea to tell someone you’re better <u>than</u> them. 
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q20-2">
+               <input type="radio" name="q20" id="q20-2" value="3">
+               If you’re a decent person, <u>then</u> it’s not a good idea to tell someone you’re better <u>then</u> them.
+             </label>
+          </div>
+           <div class="radio">
+             <label for="q20-3">
+               <input type="radio" name="q20" id="q20-3" value="4">
+               If you’re a decent person, <u>then</u> it’s not a good idea to tell someone you’re better <u>than</u> them. 
+             </label>
+             <p><button type="submit" class="btn btn-default submit" id="qsubmit20">Submit</button></p>
+             </div>
+          </div>
+           </div>
+         </div>
+
+         </fieldset>
+         </form>
+      </div>
+          </div>
+
+ </div>
+      <div class="panel panel-success" id="results" style="display: none">
+        <div class="panel-heading">
+          <h2 class="panel-title" id="results-panel">YOUR SCORE</h2>
+        </div>
+        <div class="panel-body">
+          <h3 class="score" id="percent">50%</h3>
+          <h3 class="score" id="ratio">(10/20)</h3>
+      </div>
+          </div>
+
+   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="footer">
+     <div class="container">
+       <a class="navbar-brand navbar-left" id="about" href="about.html" target="_blank">About Grammared</a>
+       <a class="navbar-brand navbar-right" id="photo" href="https://www.flickr.com/photos/justboon/" target="_blank">Photo credit: Just Boon, Flickr</a>
+     </div>
+   </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+  </body>
+</html>
